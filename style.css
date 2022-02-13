@@ -1,17 +1,40 @@
-* {
-    box-sizing: border-box;
+
+  body{
+    --bg-color: rgb(22, 22, 22);
+    --bg-color-nav: #4d4d4d;
+    --gy: greenyellow;
+    --img-border: white;
+    --border-nav: #fff;
+    --link-color:#efefef;
+    --nav-hover: rgba(0, 0, 0, 0.3);
+    --popup-bg: rgba(43, 37, 78, 0.5); 
+    --popup-heading: rgb(70, 70, 70);
   }
   
+  body.dark-theme{
+    --bg-color: rgb(255 255 255);
+    --bg-color-nav: #cbcbcb;
+    --gy: #436193;
+    --img-border: #2e2e2e;
+    --border-nav: #383838;
+    --link-color: #464646;
+    --nav-hover: rgb(255 255 255);
+    --popup-bg: rgb(116 116 116 / 50%);
+    --popup-heading: rgb(203 203 203);
+  }
+  * {
+      box-sizing: border-box;
+    }
   body {
     margin: 0px;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(22, 22, 22);
+    background-color: var(--bg-color);
   }
   
   .nav {
     height: 50px;
     width: 100%;
-    background-color: #4d4d4d;
+    background-color: var(--bg-color-nav);
     position: relative;
     padding: 0 10px 0 10px;
   }
@@ -23,7 +46,7 @@
   .nav > .nav-header > .nav-title {
     display: inline-block;
     font-size: 22px;
-    color: greenyellow;
+    color: var(--gy);
     padding: 10px 10px 10px 10px;
   }
   
@@ -41,9 +64,9 @@
     display: inline-block;
     margin-top: 5px;
     padding: 8px 10px 8px 10px;
-    color: greenyellow;
-    background-color: #4d4d4d;
-    border: 2px solid #fff;
+    color: var(--gy);
+    background-color: var(--bg-color-nav);
+    border: 2px solid var(--border-nav);
     border-radius: 5px;
   }
 
@@ -51,24 +74,24 @@
     display: inline-block;
     padding: 13px 10px 13px 10px;
     text-decoration: none;
-    color: #efefef;
+    color: var(--link-color)
   }
   
   .nav > .nav-links > a:hover{
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--nav-hover);
   }
   
   .nav > .nav-links > button:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: var(--nav-hover);
   }
 
   .nav > #nav-check {
     display: none;
   }
 
-  img{
+  .card > img{
       
-      border: 10px solid white;
+      border: 10px solid var(--img-border);
       /* box-shadow: 1px 1px 5px 1px #959595; */
     }
   .container{
@@ -84,32 +107,93 @@
       gap: 30px;
   }
 
-  .login-box{
+  .popup-box{
       z-index:1;
-      /* display: none; */
+      /* display: flex; */
+      display: none;
       height:100vh;
       width: 100vw;
       top:50px;
       left:0px;
-      background: rgba(84, 84, 84, 0.6);
+      background: var(--popup-bg);
       position: absolute;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .close-popup-button{
+      color: var(--gy);
+    position: relative;
+    z-index: 3;
+    right: -105%;
+    top:-20px;
+    border-radius: 20px;
+    font-weight: bolder;
+    font-size: larger;
   }
 
   .content{
       z-index:2;
       position: absolute;
-      top: 20vh;
-      left: calc(100vw - 70vw);
-      border: 2px solid greenyellow;
+      top: 10vh;
+      /* left: calc(100vw - 70vw); */
+      border: 2px solid var(--gy);
       width: 40vw;
-      height: 500px;
+      max-width: 500px;
+      min-width: 350px;
+      height: 650px;
       opacity: 1;
-      background-color: greenyellow;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      background-color: var(--gy);
   }
-  
+  .content > h3{
+    text-align: center;
+    font-style: italic;
+    color: var(--popup-heading);
+  }
+  .content > hr{
+    margin-bottom: 20px;
+    color: var(--gy);
+  }
+  .inp-form{
+    height: 90%;
+    width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;    
+    align-content: flex-start;
+    column-gap: 30px;
+    margin: auto;
+  } 
+
+  .input-ele{
+    border: 2px solid gray;
+    border-radius: 5px;
+    height: 30px;
+    margin: 15px;
+    width: 250px;
+  }
+
+  .inp-form > button {
+    display: inline-block;
+    margin: 15px 30px 5px 30px;
+    padding: 8px 10px 8px 10px;
+    color: var(--bg-color-nav);
+    background-color: var(--gy);
+    border: 2px solid var(--bg-color-nav);
+    border-radius: 5px;
+  }
+  .inp-form > button:hover{
+    background-color: var(--link-color);
+  }
+  .inp-form > .img-view{
+    height: 250px;
+    width: 250px;
+    margin: 15px;
+    background-color: var(--bg-color-nav);
+  }
+
+
   @media (max-width:600px) {
     .nav > .nav-btn {
       display: inline-block;
@@ -124,19 +208,19 @@
       padding: 13px;
     }
     .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-      background-color: rgba(0, 0, 0, 0.3);
+      background-color: var(--nav-hover);
     }
     .nav > .nav-btn > label > span {
       display: block;
       width: 25px;
       height: 10px;
-      border-top: 2px solid #eee;
+      border-top: 2px solid var(--link-color);
     }
     .nav > .nav-links {
       position: absolute;
       display: block;
       width: 100%;
-      background-color: #333;
+      background-color: var(--bg-color-nav);
       height: 0px;
       transition: all 0.3s ease-in;
       overflow-y: hidden;

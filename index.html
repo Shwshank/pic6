@@ -11,6 +11,7 @@
     <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
     <script type="module" src="./auth0-creds.js" ></script>
     <script type="module" src="./auth.js" ></script>
+   
 </head>
 
 <body>
@@ -29,13 +30,12 @@
             </label>
         </div>
         <div class="nav-links">
-            <a href="//github.io/jo_geek" target="_blank"> <i class="far fa-lightbulb"></i> <i class="fas fa-lightbulb"></i> Github</a>
-            <a href="http://stackoverflow.com/users/4084003/" target="_blank">Stackoverflow</a>
-            <a href="https://in.linkedin.com/in/jonesvinothjoseph" target="_blank">LinkedIn</a>
-            <a href="https://codepen.io/jo_Geek/" target="_blank">Codepen</a>
-            <a href="https://jsfiddle.net/user/jo_Geek/" target="_blank">JsFiddle</a>
+            <a href="#" id="theme" > 
+                <i class="fas fa-lightbulb" id="light-bulb" ></i>
+            </a>
             <button> Login </button>
             <button> Sign up </button>
+            <button> Upload </button>
         </div>
     </div>
     
@@ -66,10 +66,30 @@
         </div>      
     </div> -->
 
-    <div class="login-box" >
+    <div class="popup-box" >
+
         
+        <div class="content">
+            
+            <div class="close-popup-button"> 
+                <i class="fas fa-times"></i>
+             </div>
+             <h3> About the Pic </h3>
+             <hr>
+             <div class="inp-form">
+                 <input type="text" class="input-ele" placeholder="Name">
+                 <input type="number" class="input-ele" placeholder="Pic id (1 to 100)">
+                 <button> Prevew </button>
+                 <div class="img-view"></div>
+                 <button> Open in new tab </button>
+                 <button> Save </button>
+             </div>
+
+
+        </div>
     </div>
 
 </body>
+<script type="module" src="./script.js" ></script>
 
 </html>

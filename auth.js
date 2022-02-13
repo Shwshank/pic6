@@ -9,8 +9,8 @@ const auth = new auth0.WebAuth({
     clientID: CLIENT_ID,
   });
 
-  auth.popup.authorize({
-    responseType: 'token',
-    redirectUri: REDIRECT,
-    scope: SCOPE,
-  })
+  // auth.popup.authorize({
+  //   responseType: 'token',
+  //   redirectUri: REDIRECT,
+  //   scope: SCOPE,
+  // })
