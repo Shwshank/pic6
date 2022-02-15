@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/e07e6b77ff.js" crossorigin="anonymous"></script>
     <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
-    <script type="module" src="./auth0-creds.js" ></script>
-    <script type="module" src="./auth.js" ></script>
-   
+    <script type="module" src="./js/auth.js" async></script>
 </head>
 
 <body>
@@ -30,16 +28,18 @@
             </label>
         </div>
         <div class="nav-links">
-            <a href="#" id="theme" > 
-                <i class="fas fa-lightbulb" id="light-bulb" ></i>
+            <a href="#" id="theme">
+                <i class="fas fa-lightbulb"></i>
             </a>
-            <button> Login </button>
-            <button> Sign up </button>
-            <button> Upload </button>
+            <p class="user-name" id="username">  </p>
+            <button id="login"> Login </button>
+            <button id="signup"> Sign up </button>
+            <button id="upload"> Upload </button>
+            <button id="logout"> Logout </button>
         </div>
     </div>
-    
-    <!-- <div class="container">        
+
+    <!-- <div class="container" id='container'>        
         <div class="card">
             <img src="https://picsum.photos/id/237/200/300" alt="">
         </div>
@@ -66,30 +66,39 @@
         </div>      
     </div> -->
 
-    <div class="popup-box" >
+    <div class="popup-box" id="pupup_box">
 
-        
-        <div class="content">
-            
-            <div class="close-popup-button"> 
+        <div class="content" id="popup_content">
+
+            <div class="close-popup-button" id="popup_close">
                 <i class="fas fa-times"></i>
-             </div>
-             <h3> About the Pic </h3>
-             <hr>
-             <div class="inp-form">
-                 <input type="text" class="input-ele" placeholder="Name">
-                 <input type="number" class="input-ele" placeholder="Pic id (1 to 100)">
-                 <button> Prevew </button>
-                 <div class="img-view"></div>
-                 <button> Open in new tab </button>
-                 <button> Save </button>
-             </div>
+            </div>
+            <h3> About the Pic </h3>
+            <hr>
+            <div class="inp-form">
+                <input type="text" class="input-ele" placeholder="Name" id="name">
+                <input type="number" class="input-ele" placeholder="Pic id (1 to 100)" id="id">
+                <button id="preview" > Prevew </button>
+                <div class="img-view" id="img_view" ></div>
+                <button id="new_tab" > Open in new tab </button>
+                <button id="save"> Save </button>
+            </div>
 
 
         </div>
     </div>
 
+    <div class="dialog" id="dialog">
+        <div class="dialog-content">
+                <p id="dialog-text" ></p>
+            <button id="dialog-confirm"> Confirm </button>
+            <button id="dialog-close"> Close </button>
+        </div>
+    </div>
+
 </body>
-<script type="module" src="./script.js" ></script>
+<script type="module" src="./js/login-handler.js" defer></script>
+<script type="module" src="./js/script.js" defer></script>
+<script type="module" src="./js/theme.js" defer></script>
 
 </html>

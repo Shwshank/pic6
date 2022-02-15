@@ -1,4 +1,3 @@
-
   body{
     --bg-color: rgb(22, 22, 22);
     --bg-color-nav: #4d4d4d;
@@ -9,6 +8,7 @@
     --nav-hover: rgba(0, 0, 0, 0.3);
     --popup-bg: rgba(43, 37, 78, 0.5); 
     --popup-heading: rgb(70, 70, 70);
+    --do: #2e2c36;
   }
   
   body.dark-theme{
@@ -21,6 +21,7 @@
     --nav-hover: rgb(255 255 255);
     --popup-bg: rgb(116 116 116 / 50%);
     --popup-heading: rgb(203 203 203);
+    --do: rgb(225, 225, 225);
   }
   * {
       box-sizing: border-box;
@@ -60,6 +61,13 @@
     font-size: 18px;
   }
   
+  .nav-links > .user-name{
+    display: inline-block;
+    font-size: small;
+    color: var(--gy);
+    padding-right: 10px;
+
+  }
   .nav > .nav-links > button {
     display: inline-block;
     margin-top: 5px;
@@ -109,7 +117,7 @@
 
   .popup-box{
       z-index:1;
-      /* display: flex; */
+      display: flex;
       display: none;
       height:100vh;
       width: 100vw;
@@ -121,15 +129,15 @@
       align-items: center;
     }
     
-    .close-popup-button{
+  .close-popup-button{
       color: var(--gy);
-    position: relative;
-    z-index: 3;
-    right: -105%;
-    top:-20px;
-    border-radius: 20px;
-    font-weight: bolder;
-    font-size: larger;
+      position: relative;
+      z-index: 3;
+      right: -105%;
+      top:-20px;
+      border-radius: 20px;
+      font-weight: bolder;
+      font-size: larger;
   }
 
   .content{
@@ -141,7 +149,7 @@
       width: 40vw;
       max-width: 500px;
       min-width: 350px;
-      height: 650px;
+      height: 300px;
       opacity: 1;
       background-color: var(--gy);
   }
@@ -187,12 +195,62 @@
     background-color: var(--link-color);
   }
   .inp-form > .img-view{
-    height: 250px;
-    width: 250px;
+    height: 270px;
+    width: 270px;
     margin: 15px;
     background-color: var(--bg-color-nav);
+    border: 10px solid var(--img-border);
   }
 
+  .dialog{
+    z-index:5;
+    display: flex;
+    display: none;
+    height: 100vh;
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    background: var(--popup-bg);
+  }
+
+  .error{
+    border-color: #ff3860;
+  }
+
+  .success{
+    border-color: #09c372;
+  }
+
+  .dialog-content{
+    position: absolute;
+    top: 30vh;
+    border: 6px solid var(--img-border);
+    width: 40vw;
+    max-width: 500px;
+    min-width: 350px;
+    height: 200px;
+    opacity: 1;
+    background-color: var(--do);
+    text-align: center;
+    padding-top: 40px;
+    color: var(--img-border);
+  }
+  .dialog-content > button{
+    display: inline-block;
+    margin: 15px 30px 5px 30px;
+    padding: 8px 10px 8px 10px;
+    color: var(--bg-color-nav);
+    background-color: var(--gy);
+    border: 2px solid var(--bg-color-nav);
+    border-radius: 5px;
+  }
+
+  .dialog-content > button:hover{
+    background-color: var(--link-color);
+  }
 
   @media (max-width:600px) {
     .nav > .nav-btn {
