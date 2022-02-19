@@ -7,6 +7,7 @@ console.log(process.env.AUTH0_DOMAIN);
 console.log(process.env.AUTH0_CLIENT);
 console.log(process.env.REDIRECT);
 console.log(process.env.HOME);
+console.log(process.env.GITHUB_ACTIONS);
 
 const CLIENT_DOMAIN = process.env.AUTH0_DOMAIN;
 const CLIENT_ID = process.env.AUTH0_CLIENT;
