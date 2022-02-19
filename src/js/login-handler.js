@@ -1,4 +1,4 @@
-import { checkForLogin, authPupup, checkForlogout } from './auth.js';
+import { checkForLogin, authPupup, checkForlogout } from './auth';
 
 const loginBtn = document.getElementById('login');
 

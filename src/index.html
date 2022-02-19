@@ -7,9 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vanila js from 60's</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="https://kit.fontawesome.com/e07e6b77ff.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.auth0.com/js/auth0/9.18/auth0.min.js"></script>
-    <script type="module" src="./js/auth.js" async></script>
+    <!-- <script src="https://kit.fontawesome.com/e07e6b77ff.js" crossorigin="anonymous"></script> -->
 </head>
 
 <body>
@@ -29,10 +27,10 @@
         </div>
         <div class="nav-links">
             <a href="#" id="theme">
-                <i class="fas fa-lightbulb">                 
+                <i class="fa fa-lightbulb-o fa-lg" > 
                 </i>
             </a>
-            <p class="user-name" id="username">  </p>
+            <p class="user-name" id="username"> </p>
             <button id="login"> Login </button>
             <button id="signup"> Sign up </button>
             <button id="upload"> Upload </button>
@@ -40,7 +38,7 @@
         </div>
     </div>
 
-    <div class="container" id='container'>        
+    <div class="container" id='container'>
         <div class="card">
             <img src="https://picsum.photos/id/237/200/300" alt="">
         </div>
@@ -64,7 +62,7 @@
         </div>
         <div class="card">
             <img src="https://picsum.photos/id/244/250" alt="">
-        </div>      
+        </div>
     </div>
 
     <div class="popup-box" id="pupup_box">
@@ -79,9 +77,9 @@
             <div class="inp-form">
                 <input type="text" class="input-ele" placeholder="Name" id="name">
                 <input type="number" class="input-ele" placeholder="Pic id (1 to 100)" id="id">
-                <button id="preview" > Prevew </button>
-                <div class="img-view" id="img_view" ></div>
-                <button id="new_tab" > Open in new tab </button>
+                <button id="preview"> Prevew </button>
+                <div class="img-view" id="img_view"></div>
+                <button id="new_tab"> Open in new tab </button>
                 <button id="save"> Save </button>
             </div>
 
@@ -91,15 +89,12 @@
 
     <div class="dialog" id="dialog">
         <div class="dialog-content">
-                <p id="dialog-text" ></p>
+            <p id="dialog-text"></p>
             <button id="dialog-confirm"> Confirm </button>
             <button id="dialog-close"> Close </button>
         </div>
     </div>
 
 </body>
-<script type="module" src="./js/login-handler.js" defer></script>
-<script type="module" src="./js/script.js" defer></script>
-<script type="module" src="./js/theme.js" defer></script>
 
 </html>

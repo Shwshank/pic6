@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Loading...
+</body>
+<script>
+    // store token in localstorage then close window containing callback url
+    window.onload = function (){
+        const params = new URLSearchParams(window.location.hash);
+        console.log(params.get('#access_token'));
+        localStorage.setItem('accessToken', params.get('#access_token') + '');
+        window.close();
+    }
+</script>
+</html>

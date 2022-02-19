@@ -1,12 +1,18 @@
-import {config} from './auth0-creds.js'
-// eslint-disable-next-line no-undef
-const CLIENT_DOMAIN = config.domain;
+import '../style.css';
+import * as auth0 from 'auth0-js';
+import '../../node_modules/font-awesome/css/font-awesome.min.css';
 
-// eslint-disable-next-line no-undef
-const CLIENT_ID = config.client;
+console.log(auth0);
+console.log(process.env.AUTH0_DOMAIN);
+console.log(process.env.AUTH0_CLIENT);
+console.log(process.env.REDIRECT);
+console.log(process.env.HOME);
+
+const CLIENT_DOMAIN = process.env.AUTH0_DOMAIN;
+const CLIENT_ID = process.env.AUTH0_CLIENT;
+const REDIRECT = process.env.REDIRECT;
+const HOME = process.env.HOME;
 const SCOPE = 'openid profile offline_access';
-const REDIRECT = 'http://localhost:3000/callback.html';
-const HOME = 'http://localhost:3000/';
 
 const userName = document.getElementById('username');
 
@@ -25,7 +31,7 @@ export function authPupup() {
       scope: SCOPE,
     },
     function (err, authResult) {
-      // after callback url closed 
+      // after callback url closed
       window.location.reload();
     }
   );
@@ -35,29 +41,27 @@ export function checkForLogin() {
   let token = localStorage.getItem('accessToken');
   if (token) {
     auth.client.userInfo(token, function (err, user) {
-      // Now we have the user's information
       console.log(user);
-      userName.innerHTML = user.name;
-      return true
+      if (user) {
+        userName.innerHTML = user.name;
+        return true;
+      } else {
+        return false;
+      }
     });
   } else {
-    return false
+    return false;
   }
 }
 
 // store token in localstorage then close window containing callback url
-export function getHash() {
-  const params = new URLSearchParams(window.location.hash);
-  localStorage.setItem('accessToken', params.get('#access_token') + '');
-  window.close();
-}
 
 export function checkForlogout() {
-  localStorage.removeItem('accessToken')
+  localStorage.removeItem('accessToken');
   auth.logout({
     returnTo: HOME,
     clientID: CLIENT_ID,
   });
-  userName.innerHTML = ''
-  return true
+  userName.innerHTML = '';
+  return true;
 }

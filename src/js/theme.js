@@ -10,7 +10,8 @@ if (currentTheme == 'dark') {
     document.body.classList.toggle('light-theme');
   }
   
-  themeBtn.addEventListener('click', function () {
+themeBtn.addEventListener('click', function () {
+
     if (prefersDarkScheme.matches) {
       var theme;
       document.body.classList.toggle('light-theme');
