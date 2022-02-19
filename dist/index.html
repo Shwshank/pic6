@@ -1,1 +1,111 @@
-<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width,initial-scale=1"> <title>Vanila js from 60's</title> <link rel="stylesheet" href="57011448dc08b9372b5e.css"> <script defer src="app.js"></script></head> <body> <div class="nav"> <input type="checkbox" id="nav-check"> <div class="nav-header"> <div class="nav-title"> Pic6 </div> </div> <div class="nav-btn"> <label for="nav-check"> <span></span> <span></span> <span></span> </label> </div> <div class="nav-links"> <a href="#" id="theme"> <i class="fa fa-lightbulb-o fa-lg"> </i> </a> <p class="user-name" id="username"> </p> <button id="login"> Login </button> <button id="signup"> Sign up </button> <button id="upload"> Upload </button> <button id="logout"> Logout </button> </div> </div> <div class="container" id="container"> <div class="card"> <img src="https://picsum.photos/id/237/200/300" alt=""> </div> <div class="card"> <img src="https://picsum.photos/id/238/250" alt=""> </div> <div class="card"> <img src="https://picsum.photos/id/239/200/300" alt=""> </div> <div class="card"> <img src="https://picsum.photos/id/240/200" alt=""> </div> <div class="card"> <img src="https://picsum.photos/id/241/300" alt=""> </div> <div class="card"> <img src="https://picsum.photos/id/242/200/300" alt=""> </div> <div class="card"> <img src="https://picsum.photos/id/243/200/300" alt=""> </div> <div class="card"> <img src="https://picsum.photos/id/244/250" alt=""> </div> </div> <div class="popup-box" id="pupup_box"> <div class="content" id="popup_content"> <div class="close-popup-button" id="popup_close"> <i class="fas fa-times"></i> </div> <h3> About the Pic </h3> <hr> <div class="inp-form"> <input type="text" class="input-ele" placeholder="Name" id="name"> <input type="number" class="input-ele" placeholder="Pic id (1 to 100)" id="id"> <button id="preview"> Prevew </button> <div class="img-view" id="img_view"></div> <button id="new_tab"> Open in new tab </button> <button id="save"> Save </button> </div> </div> </div> <div class="dialog" id="dialog"> <div class="dialog-content"> <p id="dialog-text"></p> <button id="dialog-confirm"> Confirm </button> <button id="dialog-close"> Close </button> </div> </div> </body> </html>
+<head><script defer src="app.js"></script></head>Html Webpack Plugin:
+<pre>
+  Error: Child compilation failed:
+  Module not found: SyntaxError: /home/sam/sam/pic6/package.json (directory description file): SyntaxErr  or: /home/sam/sam/pic6/package.json (directory description file): SyntaxError: /home/sam/sam/pic6/pack  age.json (directory description file): SyntaxError: /home/sam/sam/pic6/package.json (directory descrip  tion file): SyntaxError: /home/sam/sam/pic6/package.json (directory description file): SyntaxError: /h  ome/sam/sam/pic6/package.json (directory description file): SyntaxError: Unexpected token } in JSON at   position 260
+  ModuleNotFoundError: Module not found: SyntaxError: /home/sam/sam/pic6/package.json (directory descrip  tion file): SyntaxError: /home/sam/sam/pic6/package.json (directory description file): SyntaxError: /h  ome/sam/sam/pic6/package.json (directory description file): SyntaxError: /home/sam/sam/pic6/package.js  on (directory description file): SyntaxError: /home/sam/sam/pic6/package.json (directory description f  ile): SyntaxError: /home/sam/sam/pic6/package.json (directory description file): SyntaxError: Unexpect  ed token } in JSON at position 260
+      at /home/sam/sam/pic6/node_modules/webpack/lib/Compilation.js:2014:28
+      at /home/sam/sam/pic6/node_modules/webpack/lib/NormalModuleFactory.js:791:13
+      at eval (eval at create (/home/sam/sam/pic6/node_modules/tapable/lib/HookCodeFactory.js:33:10), <a  nonymous>:10:1)
+      at /home/sam/sam/pic6/node_modules/webpack/lib/NormalModuleFactory.js:265:22
+      at eval (eval at create (/home/sam/sam/pic6/node_modules/tapable/lib/HookCodeFactory.js:33:10), <a  nonymous>:9:1)
+      at /home/sam/sam/pic6/node_modules/webpack/lib/NormalModuleFactory.js:427:22
+      at /home/sam/sam/pic6/node_modules/webpack/lib/NormalModuleFactory.js:115:11
+      at /home/sam/sam/pic6/node_modules/webpack/lib/NormalModuleFactory.js:628:23
+      at /home/sam/sam/pic6/node_modules/neo-async/async.js:2830:7
+      at done (/home/sam/sam/pic6/node_modules/neo-async/async.js:2925:13)
+  Module not found: SyntaxError: /home/sam/sam/pic6/package.json (directory description file): SyntaxErr  or: /home/sam/sam/pic6/package.json (directory description file): SyntaxError: /home/sam/sam/pic6/pack  age.json (directory description file): SyntaxError: /home/sam/sam/pic6/package.json (directory descrip  tion file): SyntaxError: /home/sam/sam/pic6/package.json (directory description file): SyntaxError: /h  ome/sam/sam/pic6/package.json (directory description file): SyntaxError: Unexpected token } in JSON at   position 260
+  ModuleNotFoundError: Module not found: SyntaxError: /home/sam/sam/pic6/package.json (directory descrip  tion file): SyntaxError: /home/sam/sam/pic6/package.json (directory description file): SyntaxError: /h  ome/sam/sam/pic6/package.json (directory description file): SyntaxError: /home/sam/sam/pic6/package.js  on (directory description file): SyntaxError: /home/sam/sam/pic6/package.json (directory description f  ile): SyntaxError: /home/sam/sam/pic6/package.json (directory description file): SyntaxError: Unexpect  ed token } in JSON at position 260
+      at /home/sam/sam/pic6/node_modules/webpack/lib/Compilation.js:2014:28
+      at /home/sam/sam/pic6/node_modules/webpack/lib/NormalModuleFactory.js:791:13
+      at eval (eval at create (/home/sam/sam/pic6/node_modules/tapable/lib/HookCodeFactory.js:33:10), <a  nonymous>:10:1)
+      at /home/sam/sam/pic6/node_modules/webpack/lib/NormalModuleFactory.js:265:22
+      at eval (eval at create (/home/sam/sam/pic6/node_modules/tapable/lib/HookCodeFactory.js:33:10), <a  nonymous>:9:1)
+      at /home/sam/sam/pic6/node_modules/webpack/lib/NormalModuleFactory.js:427:22
+      at /home/sam/sam/pic6/node_modules/webpack/lib/NormalModuleFactory.js:115:11
+      at /home/sam/sam/pic6/node_modules/webpack/lib/NormalModuleFactory.js:628:23
+      at /home/sam/sam/pic6/node_modules/neo-async/async.js:2830:7
+      at done (/home/sam/sam/pic6/node_modules/neo-async/async.js:2925:13)
+  
+  - Compilation.js:2014 
+    [pic6]/[webpack]/lib/Compilation.js:2014:28
+  
+  - NormalModuleFactory.js:791 
+    [pic6]/[webpack]/lib/NormalModuleFactory.js:791:13
+  
+  
+  - NormalModuleFactory.js:265 
+    [pic6]/[webpack]/lib/NormalModuleFactory.js:265:22
+  
+  
+  - NormalModuleFactory.js:427 
+    [pic6]/[webpack]/lib/NormalModuleFactory.js:427:22
+  
+  - NormalModuleFactory.js:115 
+    [pic6]/[webpack]/lib/NormalModuleFactory.js:115:11
+  
+  - NormalModuleFactory.js:628 
+    [pic6]/[webpack]/lib/NormalModuleFactory.js:628:23
+  
+  - async.js:2830 
+    [pic6]/[neo-async]/async.js:2830:7
+  
+  - async.js:2925 done
+    [pic6]/[neo-async]/async.js:2925:13
+  
+  - Module not found: SyntaxError: /home/sam/sam/pic6/package.json (directory description file): SyntaxE    rror: /home/sam/sam/pic6/package.json (directory description file): SyntaxError: /home/sam/sam/pic6/    package.json (directory description file): SyntaxError: /home/sam/sam/pic6/package.json (directory d    escription file): SyntaxError: /home/sam/sam/pic6/package.json (directory description file): SyntaxE    rror: /home/sam/sam/pic6/package.json (directory description file): SyntaxError: Unexpected token }     in JSON at position 260
+  
+  - ModuleNotFoundError: Module not found: SyntaxError: /home/sam/sam/pic6/package.json (directory descr    iption file): SyntaxError: /home/sam/sam/pic6/package.json (directory description file): SyntaxError    : /home/sam/sam/pic6/package.json (directory description file): SyntaxError: /home/sam/sam/pic6/pack    age.json (directory description file): SyntaxError: /home/sam/sam/pic6/package.json (directory descr    iption file): SyntaxError: /home/sam/sam/pic6/package.json (directory description file): SyntaxError    : Unexpected token } in JSON at position 260
+  
+  - Compilation.js:2014 
+    [pic6]/[webpack]/lib/Compilation.js:2014:28
+  
+  - NormalModuleFactory.js:791 
+    [pic6]/[webpack]/lib/NormalModuleFactory.js:791:13
+  
+  
+  - NormalModuleFactory.js:265 
+    [pic6]/[webpack]/lib/NormalModuleFactory.js:265:22
+  
+  
+  - NormalModuleFactory.js:427 
+    [pic6]/[webpack]/lib/NormalModuleFactory.js:427:22
+  
+  - NormalModuleFactory.js:115 
+    [pic6]/[webpack]/lib/NormalModuleFactory.js:115:11
+  
+  - NormalModuleFactory.js:628 
+    [pic6]/[webpack]/lib/NormalModuleFactory.js:628:23
+  
+  - async.js:2830 
+    [pic6]/[neo-async]/async.js:2830:7
+  
+  - async.js:2925 done
+    [pic6]/[neo-async]/async.js:2925:13
+  
+  - child-compiler.js:169 
+    [pic6]/[html-webpack-plugin]/lib/child-compiler.js:169:18
+  
+  - Compiler.js:564 
+    [pic6]/[webpack]/lib/Compiler.js:564:11
+  
+  - Compiler.js:1183 
+    [pic6]/[webpack]/lib/Compiler.js:1183:17
+  
+  
+  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
+    [pic6]/[tapable]/lib/Hook.js:18:14
+  
+  - Compiler.js:1179 
+    [pic6]/[webpack]/lib/Compiler.js:1179:33
+  
+  - Compilation.js:2785 finalCallback
+    [pic6]/[webpack]/lib/Compilation.js:2785:11
+  
+  - Compilation.js:3090 
+    [pic6]/[webpack]/lib/Compilation.js:3090:11
+  
+  
+  - Hook.js:18 Hook.CALL_ASYNC_DELEGATE [as _callAsync]
+    [pic6]/[tapable]/lib/Hook.js:18:14
+  
+</pre>
