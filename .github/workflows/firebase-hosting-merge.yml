@@ -11,6 +11,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      run: |
+          touch .env
+          echo AUTH0_CLIENT="https://xxx.execute-api.us-west-2.amazonaws.com" >> .env
+          echo AUTH0_DOMAIN=${{ secrets.AUTH0_DOMAIN }} >> .env
+          cat .env
         env:
             AUTH0_DOMAIN: ${{ secrets.AUTH0_DOMAIN }}  
       - run: env 
