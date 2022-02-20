@@ -13,13 +13,13 @@ jobs:
       - uses: actions/checkout@v2
       - run: |
           touch .env
-          echo AUTH0_CLIENT=${{ secrets.AUTH0_CLIENT } >> .env
+          echo AUTH0_CLIENT=${{ secrets.AUTH0_CLIENT }} >> .env
           echo AUTH0_DOMAIN=${{ secrets.AUTH0_DOMAIN }} >> .env
           echo HOME=${{ secrets.HOME }} >> .env
           echo REDIRECT=${{ secrets.REDIRECT }} >> .env
           cat .env
       - run: npm i
-      - run: npm run start:prod 
+      - run: npm run start:prod
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
