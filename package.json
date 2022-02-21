@@ -1,13 +1,13 @@
-{
+{ 
   "name": "pic6",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch",
     "standard": "standard --fix",
-    "start:dev": "webpack --watch",
-    "start:prod": "webpack"
+    "start:dev": "webpack --watch --config webpack.config.js --mode development",
+    "start:prod": "webpack  --config webpack.config.js --mode production"
   },
   "author": "",
   "license": "ISC",
@@ -26,6 +26,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "html-loader": "^3.1.0",
     "html-webpack-plugin": "^5.5.0",
+    "jest": "^27.5.1",  
     "prettier": "^2.5.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.69.1",

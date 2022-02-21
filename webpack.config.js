@@ -47,6 +47,5 @@ module.exports = {
       path: path.resolve(__dirname, './.env')
     })
   ],
-  mode: 'development',
   devtool: 'inline-source-map',
 };
