@@ -16,5 +16,9 @@
         "no-process-exit": "off",
         "object-shorthand": "off"
     },
-    "ignorePatterns": ["webpack.config.js"]
+    "ignorePatterns": [
+        "webpack.config.js",
+        "theme.test.js",
+        "*.test.js"
+    ]
 }
